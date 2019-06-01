@@ -1,0 +1,69 @@
+ext {
+    kotlinVersion = "1.3.21"
+    compileSdkVersion = 28
+    minSdkVersion = 15
+    targetSdkVersion = 28
+
+    constraintLayoutVersion = "1.1.3"
+    ktxVersion = "1.2.0-alpha01"
+    appCompatVersion = "1.1.0-alpha05"
+    rxKotlinVersion = "2.3.0"
+    rxAndroidVersion = "2.1.1"
+    retrofitVersion = "2.5.0"
+    lifecycleVersion = "2.0.0"
+    roomVersion = "2.1.0-rc01"
+    koinVersion = "2.0.1"
+
+    junitVersion = "4.12"
+    testRunnerVersion = "1.2.0"
+    espressoVersion = "3.2.0"
+
+    appDependencies = [
+            kotlin              : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            appCompat           : "androidx.appcompat:appcompat:$appCompatVersion",
+            ktx                 : "androidx.core:core-ktx:$ktxVersion",
+            constraintLayout    : "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion",
+            rxKotlin            : "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion",
+            rxAndroid           : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            koinAndroid         : "org.koin:koin-android:$koinVersion",
+            koinAndroidScope    : "org.koin:koin-android-scope:$koinVersion",
+            koinAndroidViewModel: "org.koin:koin-android-viewmodel:$koinVersion",
+
+            junit               : "junit:junit:$junitVersion",
+            testRunner          : "androidx.test:runner:$testRunnerVersion",
+            espresso            : "androidx.test.espresso:espresso-core:$espressoVersion"
+    ]
+
+    presentationDependencies = [
+            kotlin           : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            rxAndroid        : "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion",
+            lifeCycle        : "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion",
+            lifeCycleCompiler: "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
+    ]
+
+    domainDependencies = [
+            kotlin  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            rxKotlin: "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+    ]
+
+    dataDependencies = [
+            kotlin  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            rxKotlin: "io.reactivex.rxjava2:rxkotlin:$rxKotlinVersion"
+    ]
+
+    remoteDependencies = [
+            kotlin  : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            retrofit: "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    ]
+
+    cacheDependencies = [
+            kotlin      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            room        : "androidx.room:room-runtime:$roomVersion",
+            roomCompiler: "androidx.room:room-compiler:$roomVersion",
+            roomRx      : "androidx.room:room-rxjava2:$roomVersion"
+    ]
+
+    sharedDependencies = [
+            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    ]
+}

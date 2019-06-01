@@ -1,0 +1,14 @@
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    def domainDependencies = rootProject.ext.domainDependencies
+
+    api project(":shared")
+
+    implementation domainDependencies.kotlin
+    api domainDependencies.rxKotlin
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"

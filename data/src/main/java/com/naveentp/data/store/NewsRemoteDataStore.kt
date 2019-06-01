@@ -1,0 +1,18 @@
+package com.naveentp.data.store
+
+import com.naveentp.data.repository.NewsRemote
+import com.naveentp.shared.NewsDetails
+import io.reactivex.Flowable
+
+/**
+ * @author Naveen T P
+ * @since 01/06/19
+ */
+class NewsRemoteDataStore(
+    private val newsRemote: NewsRemote
+) : NewsDataStore {
+
+    override fun getTopHeadlines(): Flowable<NewsDetails> {
+        return newsRemote.getTopHeadlines()
+    }
+}
