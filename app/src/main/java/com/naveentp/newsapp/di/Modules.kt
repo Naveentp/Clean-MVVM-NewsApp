@@ -11,7 +11,7 @@ import com.naveentp.data.store.NewsRemoteDataStore
 import com.naveentp.domain.repository.NewsRepository
 import com.naveentp.domain.scheduler.SchedulerProvider
 import com.naveentp.domain.usecase.NewsDetailsUseCase
-import com.naveentp.newsapp.AndroidSchedulerProvider
+import com.naveentp.newsapp.scheduler.AndroidSchedulerProvider
 import com.naveentp.newsapp.BuildConfig
 import com.naveentp.presentation.NewsDetailsViewModel
 import com.naveentp.remote.service.NewsService
@@ -52,7 +52,6 @@ val domainModule: Module = module {
 
 val dataModule: Module = module {
     single<NewsRepository> { NewsDataRepository(newsDataStoreFactory = get()) }
-
     single { NewsDataStoreFactory(newsCacheDataStore = get(), newsRemoteDataStore = get()) }
     single { NewsCacheDataStore(newsCache = get()) }
     single { NewsRemoteDataStore(newsRemote = get()) }

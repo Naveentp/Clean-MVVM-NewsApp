@@ -1,4 +1,4 @@
-package com.naveentp.newsapp
+package com.naveentp.newsapp.scheduler
 
 import com.naveentp.domain.scheduler.SchedulerProvider
 import io.reactivex.android.schedulers.AndroidSchedulers

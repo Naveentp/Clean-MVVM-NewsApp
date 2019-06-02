@@ -42,6 +42,9 @@ dependencies {
     implementation appDependencies.koinAndroid
     implementation appDependencies.koinAndroidScope
     implementation appDependencies.koinAndroidViewModel
+    implementation appDependencies.cardView
+    implementation appDependencies.recyclerView
+    implementation appDependencies.picasso
 
     testImplementation appDependencies.junit
     androidTestImplementation appDependencies.testRunner
