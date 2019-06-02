@@ -7,7 +7,9 @@ dependencies {
     implementation project(":data")
 
     implementation remoteDependencies.kotlin
-    implementation remoteDependencies.retrofit
+    api remoteDependencies.retrofit
+    api remoteDependencies.retrofitConverter
+    api remoteDependencies.retrofitAdapter
 }
 
 sourceCompatibility = "1.8"

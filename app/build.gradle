@@ -13,6 +13,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "NEWS_API_KEY", '"NEWS_API_KEY"'
     }
 
     buildTypes {
@@ -28,7 +29,7 @@ dependencies {
 
     implementation project(":domain")
     implementation project(":data")
-    implementation project(":remote")
+    api project(":remote")
     implementation project(":cache")
     implementation project(":presentation")
 

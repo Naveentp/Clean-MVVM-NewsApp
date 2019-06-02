@@ -10,10 +10,11 @@ import io.reactivex.Flowable
  * @since 01/06/19
  */
 class NewsRemoteImpl(
-    private val newsService: NewsService
+    private val newsService: NewsService,
+    private val apiKey: String
 ) : NewsRemote {
 
     override fun getTopHeadlines(): Flowable<NewsDetails> {
-        return newsService.getTopHeadlines()
+        return newsService.getTopHeadlines(apiKey)
     }
 }
