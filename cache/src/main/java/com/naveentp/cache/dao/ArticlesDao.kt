@@ -1,9 +1,6 @@
 package com.naveentp.cache.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.naveentp.cache.model.ArticleEntity
 import io.reactivex.Completable
 import io.reactivex.Flowable
@@ -20,4 +17,7 @@ interface ArticlesDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun saveTopHeadlines(newsList: List<ArticleEntity>): Completable
+
+    @Query("Delete from Articles")
+    fun deleteTopHeadlines(): Completable
 }

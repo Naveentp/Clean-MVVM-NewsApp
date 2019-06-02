@@ -13,4 +13,6 @@ interface NewsDataStore {
     fun getTopHeadlines(): Observable<NewsDetails>
 
     fun saveTopHeadlines(newsDetails: NewsDetails) : Completable
+
+    fun deleteTopHeadlines() : Completable
 }

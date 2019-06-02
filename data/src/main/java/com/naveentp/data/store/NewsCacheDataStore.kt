@@ -20,4 +20,8 @@ class NewsCacheDataStore(
     override fun saveTopHeadlines(newsDetails: NewsDetails): Completable {
         return newsCache.saveTopHeadlines(newsDetails)
     }
+
+    override fun deleteTopHeadlines(): Completable {
+        return newsCache.deleteTopHeadlines()
+    }
 }

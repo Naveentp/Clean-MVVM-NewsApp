@@ -20,4 +20,8 @@ class NewsRemoteDataStore(
     override fun saveTopHeadlines(newsDetails: NewsDetails): Completable {
         throw UnsupportedOperationException("Not Supported")
     }
+
+    override fun deleteTopHeadlines(): Completable {
+        throw UnsupportedOperationException("Not Supported")
+    }
 }

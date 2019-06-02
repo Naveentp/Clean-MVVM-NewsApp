@@ -15,5 +15,7 @@ interface NewsCache {
 
     fun saveTopHeadlines(newsDetails: NewsDetails): Completable
 
+    fun deleteTopHeadlines(): Completable
+
     fun areArticlesCached(): Single<Boolean>
 }

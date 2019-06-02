@@ -29,6 +29,10 @@ class NewsCacheImpl(
 
     }
 
+    override fun deleteTopHeadlines(): Completable {
+        return newsDatabase.articlesDao().deleteTopHeadlines()
+    }
+
     override fun areArticlesCached(): Single<Boolean> {
         return newsDatabase.articlesDao().getTopHeadlines().isEmpty
             .map { !it }
