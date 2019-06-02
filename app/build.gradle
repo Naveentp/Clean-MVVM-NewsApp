@@ -45,6 +45,7 @@ dependencies {
     implementation appDependencies.cardView
     implementation appDependencies.recyclerView
     implementation appDependencies.picasso
+    debugImplementation appDependencies.debugDb
 
     testImplementation appDependencies.junit
     androidTestImplementation appDependencies.testRunner

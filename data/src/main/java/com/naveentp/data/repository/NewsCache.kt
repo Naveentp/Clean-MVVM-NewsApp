@@ -1,7 +1,9 @@
 package com.naveentp.data.repository
 
 import com.naveentp.shared.NewsDetails
-import io.reactivex.Flowable
+import io.reactivex.Completable
+import io.reactivex.Observable
+import io.reactivex.Single
 
 /**
  * @author Naveen T P
@@ -9,5 +11,9 @@ import io.reactivex.Flowable
  */
 interface NewsCache {
 
-    fun getTopHeadlines(): Flowable<NewsDetails>
+    fun getTopHeadlines(): Observable<NewsDetails>
+
+    fun saveTopHeadlines(newsDetails: NewsDetails): Completable
+
+    fun areArticlesCached(): Single<Boolean>
 }

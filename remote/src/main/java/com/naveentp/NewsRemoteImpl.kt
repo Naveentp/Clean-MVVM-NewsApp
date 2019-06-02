@@ -3,7 +3,7 @@ package com.naveentp
 import com.naveentp.data.repository.NewsRemote
 import com.naveentp.remote.service.NewsService
 import com.naveentp.shared.NewsDetails
-import io.reactivex.Flowable
+import io.reactivex.Observable
 
 /**
  * @author Naveen T P
@@ -14,7 +14,7 @@ class NewsRemoteImpl(
     private val apiKey: String
 ) : NewsRemote {
 
-    override fun getTopHeadlines(): Flowable<NewsDetails> {
+    override fun getTopHeadlines(): Observable<NewsDetails> {
         return newsService.getTopHeadlines(apiKey)
     }
 }

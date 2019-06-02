@@ -2,7 +2,8 @@ package com.naveentp.data.store
 
 import com.naveentp.data.repository.NewsRemote
 import com.naveentp.shared.NewsDetails
-import io.reactivex.Flowable
+import io.reactivex.Completable
+import io.reactivex.Observable
 
 /**
  * @author Naveen T P
@@ -12,7 +13,11 @@ class NewsRemoteDataStore(
     private val newsRemote: NewsRemote
 ) : NewsDataStore {
 
-    override fun getTopHeadlines(): Flowable<NewsDetails> {
+    override fun getTopHeadlines(): Observable<NewsDetails> {
         return newsRemote.getTopHeadlines()
+    }
+
+    override fun saveTopHeadlines(newsDetails: NewsDetails): Completable {
+        throw UnsupportedOperationException("Not Supported")
     }
 }

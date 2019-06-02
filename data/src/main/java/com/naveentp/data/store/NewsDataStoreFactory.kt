@@ -9,8 +9,13 @@ class NewsDataStoreFactory(
     private val newsRemoteDataStore: NewsRemoteDataStore
 ) {
 
-    fun getDataStore(): NewsDataStore {
-        //TODO: Return data store based on cache expiry
-        return newsRemoteDataStore
+    fun getDataStore(isNetworkAvailable: Boolean, projectCached: Boolean): NewsDataStore {
+        return if (!isNetworkAvailable && projectCached)
+            newsCacheDataStore
+        else newsRemoteDataStore
+    }
+
+    fun getCacheDataStore(): NewsDataStore {
+        return newsCacheDataStore
     }
 }

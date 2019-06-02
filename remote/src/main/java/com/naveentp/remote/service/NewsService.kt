@@ -1,7 +1,7 @@
 package com.naveentp.remote.service
 
 import com.naveentp.shared.NewsDetails
-import io.reactivex.Flowable
+import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -12,5 +12,5 @@ import retrofit2.http.Query
 interface NewsService {
 
     @GET("top-headlines?sources=google-news")
-    fun getTopHeadlines(@Query("apiKey") apikey: String): Flowable<NewsDetails>
+    fun getTopHeadlines(@Query("apiKey") apikey: String): Observable<NewsDetails>
 }

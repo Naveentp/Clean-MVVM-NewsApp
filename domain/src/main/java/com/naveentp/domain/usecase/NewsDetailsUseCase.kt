@@ -3,7 +3,7 @@ package com.naveentp.domain.usecase
 import com.naveentp.domain.repository.NewsRepository
 import com.naveentp.domain.scheduler.SchedulerProvider
 import com.naveentp.shared.NewsDetails
-import io.reactivex.Flowable
+import io.reactivex.Observable
 
 /**
  * @author Naveen T P
@@ -14,7 +14,7 @@ open class NewsDetailsUseCase(
     private val schedulerProvider: SchedulerProvider.Factory
 ) {
 
-    fun getTopHeadlines(): Flowable<NewsDetails> {
+    fun getTopHeadlines(): Observable<NewsDetails> {
         return newsRepository.getTopHeadLines()
             .compose(schedulerProvider.create())
     }

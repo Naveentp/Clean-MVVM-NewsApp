@@ -2,7 +2,8 @@ package com.naveentp.data.store
 
 import com.naveentp.data.repository.NewsCache
 import com.naveentp.shared.NewsDetails
-import io.reactivex.Flowable
+import io.reactivex.Completable
+import io.reactivex.Observable
 
 /**
  * @author Naveen T P
@@ -12,7 +13,11 @@ class NewsCacheDataStore(
     private val newsCache: NewsCache
 ) : NewsDataStore {
 
-    override fun getTopHeadlines(): Flowable<NewsDetails> {
+    override fun getTopHeadlines(): Observable<NewsDetails> {
         return newsCache.getTopHeadlines()
+    }
+
+    override fun saveTopHeadlines(newsDetails: NewsDetails): Completable {
+        return newsCache.saveTopHeadlines(newsDetails)
     }
 }

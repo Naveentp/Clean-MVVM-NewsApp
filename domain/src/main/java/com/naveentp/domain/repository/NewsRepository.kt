@@ -1,7 +1,7 @@
 package com.naveentp.domain.repository
 
 import com.naveentp.shared.NewsDetails
-import io.reactivex.Flowable
+import io.reactivex.Observable
 
 /**
  * @author Naveen T P
@@ -9,5 +9,5 @@ import io.reactivex.Flowable
  */
 interface NewsRepository {
 
-    fun getTopHeadLines(): Flowable<NewsDetails>
+    fun getTopHeadLines(): Observable<NewsDetails>
 }

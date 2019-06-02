@@ -15,6 +15,7 @@ ext {
     koinVersion = "2.0.1"
     supportVersion = "1.0.0"
     picassoVersion = "2.71828"
+    debugDb = "1.0.6"
 
     junitVersion = "4.12"
     testRunnerVersion = "1.2.0"
@@ -33,6 +34,7 @@ ext {
             cardView            : "androidx.cardview:cardview:$supportVersion",
             recyclerView        : "androidx.recyclerview:recyclerview:$supportVersion",
             picasso             : "com.squareup.picasso:picasso:$picassoVersion",
+            debugDb             : "com.amitshekhar.android:debug-db:$debugDb",
 
             junit               : "junit:junit:$junitVersion",
             testRunner          : "androidx.test:runner:$testRunnerVersion",

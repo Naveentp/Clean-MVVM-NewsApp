@@ -1,7 +1,8 @@
 package com.naveentp.data.store
 
 import com.naveentp.shared.NewsDetails
-import io.reactivex.Flowable
+import io.reactivex.Completable
+import io.reactivex.Observable
 
 /**
  * @author Naveen T P
@@ -9,5 +10,7 @@ import io.reactivex.Flowable
  */
 interface NewsDataStore {
 
-    fun getTopHeadlines(): Flowable<NewsDetails>
+    fun getTopHeadlines(): Observable<NewsDetails>
+
+    fun saveTopHeadlines(newsDetails: NewsDetails) : Completable
 }
