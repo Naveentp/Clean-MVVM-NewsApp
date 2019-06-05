@@ -22,8 +22,12 @@ NewsApp is a tiny little app which brings the latest news from Google news. Inte
 
 ## Steps to build the app
 - Create your API key at [News API](https://newsapi.org/)
-- Add the generated API key in `app/build.gradle` like below
+- Add the generated API key in `app/build.gradle` like below  
 `buildConfigField "String", "NEWS_API_KEY", '"YOUR_NEWS_API_KEY"'`
 - Build and run the app.
+
+## TODO
+- Write test cases for all the modules.
+
 
 Thank you!
