@@ -27,7 +27,12 @@ NewsApp is a tiny little app which brings the latest news from Google news. Inte
 - Build and run the app.
 
 ## TODO
-- Write test cases for all the modules.
-
+- Write test cases for all the modules.  
+    - ~~Domain module~~
+    - Remote module
+    - Cache module
+    - Data module
+    - App module
+    - Shared module
 
 Thank you!

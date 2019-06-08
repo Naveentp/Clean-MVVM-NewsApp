@@ -8,6 +8,10 @@ dependencies {
 
     implementation domainDependencies.kotlin
     api domainDependencies.rxKotlin
+
+    testImplementation domainDependencies.junit
+    testImplementation domainDependencies.mockito
+    testImplementation domainDependencies.assertj
 }
 
 sourceCompatibility = "1.8"
