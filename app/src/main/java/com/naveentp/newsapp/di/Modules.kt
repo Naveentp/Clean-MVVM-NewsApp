@@ -2,7 +2,7 @@ package com.naveentp.newsapp.di
 
 import android.content.Context
 import androidx.room.Room
-import com.naveentp.NewsRemoteImpl
+import com.naveentp.remote.NewsRemoteImpl
 import com.naveentp.cache.NewsCacheImpl
 import com.naveentp.cache.factory.NewsDatabase
 import com.naveentp.cache.mapper.ArticlesMapper
@@ -20,7 +20,7 @@ import com.naveentp.newsapp.util.AndroidSchedulerProvider
 import com.naveentp.newsapp.util.NetworkUtil
 import com.naveentp.presentation.NewsDetailsViewModel
 import com.naveentp.remote.service.NewsService
-import com.naveentp.util.NewsInterceptor
+import com.naveentp.remote.util.NewsInterceptor
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidApplication
 import org.koin.android.viewmodel.dsl.viewModel

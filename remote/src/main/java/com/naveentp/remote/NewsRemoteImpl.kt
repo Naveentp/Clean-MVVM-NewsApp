@@ -1,4 +1,4 @@
-package com.naveentp
+package com.naveentp.remote
 
 import com.naveentp.data.repository.NewsRemote
 import com.naveentp.remote.service.NewsService

@@ -1,4 +1,4 @@
-package com.naveentp.util
+package com.naveentp.remote.util
 
 import okhttp3.Interceptor
 import okhttp3.Response
