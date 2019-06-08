@@ -10,11 +10,10 @@ import io.reactivex.Observable
  * @since 01/06/19
  */
 class NewsRemoteImpl(
-    private val newsService: NewsService,
-    private val apiKey: String
+    private val newsService: NewsService
 ) : NewsRemote {
 
     override fun getTopHeadlines(): Observable<NewsDetails> {
-        return newsService.getTopHeadlines(apiKey)
+        return newsService.getTopHeadlines()
     }
 }

@@ -20,6 +20,7 @@ import com.naveentp.newsapp.util.AndroidSchedulerProvider
 import com.naveentp.newsapp.util.NetworkUtil
 import com.naveentp.presentation.NewsDetailsViewModel
 import com.naveentp.remote.service.NewsService
+import com.naveentp.util.NewsInterceptor
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidApplication
 import org.koin.android.viewmodel.dsl.viewModel
@@ -64,12 +65,7 @@ val dataModule: Module = module {
             isNetworkAvailable = NetworkUtil.isNetworkAvailable(androidApplication())
         )
     }
-    single {
-        NewsDataStoreFactory(
-            newsCacheDataStore = get(),
-            newsRemoteDataStore = get()
-        )
-    }
+    single { NewsDataStoreFactory(newsCacheDataStore = get(), newsRemoteDataStore = get()) }
     single { NewsCacheDataStore(newsCache = get()) }
     single { NewsRemoteDataStore(newsRemote = get()) }
 }
@@ -81,13 +77,10 @@ val cacheModule: Module = module {
 }
 
 val remoteModule: Module = module {
-    single<NewsRemote> { NewsRemoteImpl(newsService = get(), apiKey = BuildConfig.NEWS_API_KEY) }
+    single<NewsRemote> { NewsRemoteImpl(newsService = get()) }
     single<NewsService> { retrofit.create(NewsService::class.java) }
 }
 
-private const val BASE_URL = "https://newsapi.org/v2/"
-
-private val retrofit = createRetrofit(BASE_URL)
 
 private fun createRoomDb(appContext: Context): NewsDatabase {
     return Room
@@ -95,11 +88,21 @@ private fun createRoomDb(appContext: Context): NewsDatabase {
         .build()
 }
 
+private const val BASE_URL = "https://newsapi.org/v2/"
+
+private val retrofit = createRetrofit(BASE_URL)
+
 private fun createRetrofit(baseUrl: String): Retrofit {
     return Retrofit.Builder()
-        .client(OkHttpClient())
+        .client(createOkHttpClient())
         .baseUrl(baseUrl)
         .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+        .build()
+}
+
+private fun createOkHttpClient(): OkHttpClient {
+    return OkHttpClient().newBuilder()
+        .addInterceptor(NewsInterceptor(BuildConfig.NEWS_API_KEY))
         .build()
 }
