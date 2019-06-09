@@ -68,7 +68,11 @@ ext {
             kotlin           : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
             retrofit         : "com.squareup.retrofit2:retrofit:$retrofitVersion",
             retrofitConverter: "com.squareup.retrofit2:converter-gson:$retrofitVersion",
-            retrofitAdapter  : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+            retrofitAdapter  : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+
+            junit   : "junit:junit:${junitVersion}",
+            mockito : "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj : "org.assertj:assertj-core:${assertJVersion}"
     ]
 
     cacheDependencies = [

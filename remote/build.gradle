@@ -10,6 +10,10 @@ dependencies {
     api remoteDependencies.retrofit
     api remoteDependencies.retrofitConverter
     api remoteDependencies.retrofitAdapter
+
+    testImplementation remoteDependencies.junit
+    testImplementation remoteDependencies.mockito
+    testImplementation remoteDependencies.assertj
 }
 
 sourceCompatibility = "1.8"
