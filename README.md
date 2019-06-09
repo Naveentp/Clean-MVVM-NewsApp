@@ -29,10 +29,10 @@ NewsApp is a tiny little app which brings the latest news from Google news. Inte
 ## TODO
 - Write test cases for all the modules.  
     - ~~Domain module~~
-    - Remote module
+    - ~~Remote module~~
     - Cache module
     - Data module
+    - Presentation Module
     - App module
-    - Shared module
 
 Thank you!
