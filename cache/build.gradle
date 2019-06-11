@@ -29,4 +29,12 @@ dependencies {
     implementation cacheDependencies.room
     api cacheDependencies.roomRx
     kapt cacheDependencies.roomCompiler
+
+    testImplementation cacheDependencies.junit
+    testImplementation cacheDependencies.mockito
+    testImplementation cacheDependencies.assertj
+    testImplementation cacheDependencies.robolectric
+    testImplementation cacheDependencies.archTesting
+    testImplementation cacheDependencies.roomTesting
+    testImplementation cacheDependencies.testCore
 }

@@ -22,6 +22,10 @@ ext {
     espressoVersion = "3.2.0"
     assertJVersion = '3.12.2'
     mockitoKotlinVersion = '2.1.0'
+    robolectricVersion = "4.3"
+    androidSupportRunnerVersion = '1.0.0'
+    androidSupportRulesVersion = '1.0.0'
+    testCoreVersion = '1.0.0'
 
     appDependencies = [
             kotlin              : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
@@ -76,10 +80,20 @@ ext {
     ]
 
     cacheDependencies = [
-            kotlin      : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
-            room        : "androidx.room:room-runtime:$roomVersion",
-            roomCompiler: "androidx.room:room-compiler:$roomVersion",
-            roomRx      : "androidx.room:room-rxjava2:$roomVersion"
+            kotlin       : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+            room         : "androidx.room:room-runtime:$roomVersion",
+            roomCompiler : "androidx.room:room-compiler:$roomVersion",
+            roomRx       : "androidx.room:room-rxjava2:$roomVersion",
+
+            junit        : "junit:junit:${junitVersion}",
+            mockito      : "com.nhaarman.mockitokotlin2:mockito-kotlin:${mockitoKotlinVersion}",
+            assertj      : "org.assertj:assertj-core:${assertJVersion}",
+            robolectric  : "org.robolectric:robolectric:${robolectricVersion}",
+            roomTesting  : "android.arch.persistence.room:testing:${roomVersion}",
+            archTesting  : "android.arch.core:core-testing:${roomVersion}",
+            supportRunner: "com.android.support.test:runner:${androidSupportRunnerVersion}",
+            supportRules : "com.android.support.test:rules:${androidSupportRulesVersion}",
+            testCore     : "androidx.test:core:${testCoreVersion}"
     ]
 
     sharedDependencies = [
