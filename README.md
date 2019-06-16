@@ -2,6 +2,9 @@
 
 > An Android application built using Clean + MVVM architecture.
 
+## Featured in
+[![Awesome Android](https://img.shields.io/badge/Awesome%20Android-156-green.svg)](https://android.libhunt.com/newsletter/156)
+
 ## Components used in the app.
 - [Kotlin](https://kotlinlang.org/) - As a programming language.
 - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Lifecycle aware Observable data holder class.
