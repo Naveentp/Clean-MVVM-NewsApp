@@ -14,7 +14,10 @@ import com.squareup.picasso.Picasso
  * @author Naveen T P
  * @since 02/06/19
  */
-class NewsListAdapter(private val articles: List<NewsDetails.Article>) :
+class NewsListAdapter(
+    private val articles: List<NewsDetails.Article>,
+    private val clickListener: (NewsDetails.Article) -> Unit
+) :
     RecyclerView.Adapter<NewsListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,7 +28,9 @@ class NewsListAdapter(private val articles: List<NewsDetails.Article>) :
     override fun getItemCount(): Int = articles.count()
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(articles[position])
+        val article = articles[position]
+        holder.bind(article)
+        holder.itemView.setOnClickListener { clickListener(article) }
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
