@@ -38,4 +38,10 @@ NewsApp is a tiny little app which brings the latest news from Google news. Inte
     - Presentation Module
     - App module
 
+
+## Donation
+If this project help you reduce time to develop, you can buy me a cup of coffee :) 
+
+<a href="https://www.buymeacoffee.com/naveentp1" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
 Thank you!
